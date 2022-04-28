@@ -1,0 +1,35 @@
+{
+  "name": "electron-app",
+  "private": true,
+  "version": "0.0.0",
+  "main": "electron.js",
+  "description": "simple electron-app",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron": "electron .",
+    "e:launch": "npm run build && npm run electron",
+    "e:build": "npx electron-packager . electron-app --out prod/build/",
+    "e:i": "npx electron-installer-debian --src prod/build/electron-app-linux-x64 --dest prod/installers/ --arch amd64"
+  },
+  "author": "dmrompav",
+  "dependencies": {
+    "electron": "^18.1.0",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.13",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.1",
+    "autoprefixer": "^10.4.5",
+    "electron-installer-debian": "^3.1.0",
+    "electron-packager": "^15.5.1",
+    "electron-winstaller": "^5.0.0",
+    "postcss": "^8.4.12",
+    "pug": "^3.0.2",
+    "sass": "^1.51.0",
+    "tailwindcss": "^3.0.24",
+    "vite": "^2.9.5"
+  }
+}
